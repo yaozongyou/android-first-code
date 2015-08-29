@@ -9,6 +9,9 @@ import android.net.NetworkInfo;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.widget.Toast;
+import android.widget.Button;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 public class MainActivity extends Activity
 {
@@ -21,6 +24,16 @@ public class MainActivity extends Activity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        Button button = (Button)findViewById(R.id.button);
+        button.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent("com.yaozongyou.broadcasttest.MY_BROADCAST");
+                sendBroadcast(intent);
+            }        
+        });
+
 
         intentFilter = new IntentFilter();
         intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
