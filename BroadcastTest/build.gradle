@@ -6,6 +6,7 @@ buildscript {
         classpath 'com.android.tools.build:gradle:1.2.2'
     }
 }
+
 apply plugin: 'android'
 
 android {
@@ -18,4 +19,10 @@ android {
             proguardFile getDefaultProguardFile('proguard-android.txt')
         }
     }
+}
+
+apply plugin: 'com.android.application'
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }
