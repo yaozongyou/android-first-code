@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="com.yaozongyou.databasetest"
+      package="com.yaozongyou.contactstest"
       android:versionCode="1"
       android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application android:label="@string/app_name" android:icon="@drawable/ic_launcher">
         <activity android:name="MainActivity"
                   android:label="@string/app_name">
@@ -11,9 +14,5 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <provider
-            android:name="com.yaozongyou.databasetest.DatabaseProvider"
-            android:authorities="com.yaozongyou.databasetest.provider">
-        </provider>
     </application>
 </manifest>

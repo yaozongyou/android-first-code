@@ -2,7 +2,6 @@
 
 package com.yaozongyou.databasetest;
 
-import android.widget.Toast;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
